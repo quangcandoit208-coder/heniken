@@ -21,9 +21,17 @@ const getEnv = (name: string): string => {
   return value;
 };
 
+const normalizePrivateKey = (value: string) => {
+  return value
+    .trim()
+    .replace(/,$/, '')
+    .replace(/^["']|["']$/g, '')
+    .replace(/\\n/g, '\n');
+};
+
 const createJwt = () => {
   const clientEmail = getEnv('GOOGLE_CLIENT_EMAIL');
-  const privateKey = getEnv('GOOGLE_PRIVATE_KEY').replace(/\\n/g, '\n');
+  const privateKey = normalizePrivateKey(getEnv('GOOGLE_PRIVATE_KEY'));
   const now = Math.floor(Date.now() / 1000);
 
   const header = {
