@@ -1,4 +1,4 @@
-import { CalendarDataResponse, DataWarning } from '../types';
+import type { CalendarDataResponse, DataWarning } from '../types';
 import { readSheetRange } from './_googleSheets';
 import { mapActivationEvents, mapTotalCampaigns } from './_mappers';
 

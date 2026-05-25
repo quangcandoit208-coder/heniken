@@ -1,4 +1,4 @@
-import { DataWarning, ProgramEvent, ProgramType, Promotion, Region } from '../types';
+import type { DataWarning, ProgramEvent, ProgramType, Promotion, Region } from '../types';
 import {
   addWarning,
   cleanText,

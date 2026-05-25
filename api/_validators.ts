@@ -1,4 +1,4 @@
-import { DataWarning } from '../types';
+import type { DataWarning } from '../types';
 
 export type SheetName = DataWarning['sheet'];
 
